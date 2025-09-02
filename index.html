@@ -1,70 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Simple HTML Form</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Example HTML & CSS Website</title>
+    <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <h1>Sample Form</h1>
 
-  <form action="#" method="post">
+<header>
+    <h1>Welcome to My Example Website</h1>
+    <nav>
+        <ul>
+            <li><a href="#about" title="About Us">About</a></li>
+            <li><a href="#services" title="Our Services">Services</a></li>
+            <li><a href="#gallery" title="Gallery">Gallery</a></li>
+            <li><a href="#contact" title="Contact Us">Contact</a></li>
+        </ul>
+    </nav>
+</header>
 
-    <!-- Fieldset 1: Personal Info -->
-    <fieldset>
-      <legend>Personal Information</legend>
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name"><br><br>
+<main>
 
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email"><br><br>
+    <section id="about">
+        <h2>About Us</h2>
+        <p>This website is a <strong>simple example</strong> of using <em>HTML</em> and <code>CSS</code> together.</p>
+        <p>We use various HTML elements to showcase their usage including: images, lists, tables, and forms.</p>
+        <blockquote cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">
+            "Using semantic elements improves accessibility and SEO of the webpage."
+        </blockquote>
+    </section>
 
-      <label for="dob">Date of Birth:</label>
-      <input type="date" id="dob" name="dob">
-    </fieldset>
+    <section id="services">
+        <h2>Our Services</h2>
 
-    <!-- Fieldset 2: Preferences -->
-    <fieldset>
-      <legend>Preferences</legend>
-      <label for="category">Choose a category:</label>
-      <select id="category" name="category">
-        <optgroup label="Technology">
-          <option value="web">Web Development</option>
-          <option value="ai">Artificial Intelligence</option>
-        </optgroup>
-        <optgroup label="Design">
-          <option value="ui">UI Design</option>
-          <option value="ux">UX Research</option>
-        </optgroup>
-      </select><br><br>
+        <article>
+            <h3>Web Development</h3>
+            <p>We build responsive websites using modern HTML5 and CSS3.</p>
+            <ul>
+                <li>Responsive Design</li>
+                <li>Accessibility</li>
+                <li>Performance Optimization</li>
+            </ul>
+        </article>
 
-      <label for="color">Favorite Color:</label>
-      <input type="color" id="color" name="color"><br><br>
+        <article>
+            <h3>SEO Consulting</h3>
+            <p>Improve your website rankings with our expert SEO services.</p>
+            <ol>
+                <li>Keyword Research</li>
+                <li>Content Optimization</li>
+                <li>Link Building</li>
+            </ol>
+        </article>
 
-      <label for="satisfaction">Satisfaction (1-10):</label>
-      <input type="range" id="satisfaction" name="satisfaction" min="1" max="10">
-    </fieldset>
+    </section>
 
-    <!-- Fieldset 3: Feedback -->
-    <fieldset>
-      <legend>Feedback</legend>
-      <label for="comments">Your Comments:</label><br>
-      <textarea id="comments" name="comments" rows="5" cols="40"></textarea><br><br>
+    <section id="gallery">
+        <h2>Gallery</h2>
+        <figure>
+            <img src="https://via.placeholder.com/150" alt="Placeholder Image 1" />
+            <figcaption>Example Image 1</figcaption>
+        </figure>
+        <figure>
+            <img src="https://via.placeholder.com/150" alt="Placeholder Image 2" />
+            <figcaption>Example Image 2</figcaption>
+        </figure>
+    </section>
 
-      <label for="subscribe">Subscribe to newsletter:</label>
-      <input type="checkbox" id="subscribe" name="subscribe"><br><br>
+    <section id="data">
+        <h2>Sample Table</h2>
+        <table>
+            <caption>Monthly Sales</caption>
+            <thead>
+                <tr>
+                    <th>Month</th>
+                    <th>Sales</th>
+                    <th>Growth</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>January</td>
+                    <td>$1000</td>
+                    <td>5%</td>
+                </tr>
+                <tr>
+                    <td>February</td>
+                    <td>$1200</td>
+                    <td>20%</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>Total</td>
+                    <td>$2200</td>
+                    <td>12.5%</td>
+                </tr>
+            </tfoot>
+        </table>
+    </section>
 
-      <label>Gender:</label>
-      <input type="radio" id="male" name="gender" value="male">
-      <label for="male">Male</label>
-      <input type="radio" id="female" name="gender" value="female">
-      <label for="female">Female</label>
-    </fieldset>
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form action="#" method="POST">
+            <fieldset>
+                <legend>Send us a message</legend>
 
-    <!-- Buttons -->
-    <br>
-    <button type="submit">Submit</button>
-    <button type="reset">Reset</button>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Your name" required />
 
-  </form>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="you@example.com" required />
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" placeholder="Your message here" required></textarea>
+
+                <label for="subscribe">
+                  <input type="checkbox" id="subscribe" name="subscribe" />
+                  Subscribe to newsletter
+                </label>
+
+                <label>Choose your contact method:</label>
+                <label><input type="radio" name="contact-method" value="email" checked /> Email</label>
+                <label><input type="radio" name="contact-method" value="phone" /> Phone</label>
+
+                <label for="country">Country:</label>
+                <select id="country" name="country">
+                    <option value="">Select</option>
+                    <option value="us">United States</option>
+                    <option value="ca">Canada</option>
+                    <option value="uk">United Kingdom</option>
+                </select>
+
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+
+            </fieldset>
+        </form>
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2025 Example Website. All rights reserved.</p>
+    <address>
+        Contact us at <a href="mailto:info@example.com">info@example.com</a>
+    </address>
+</footer>
+
 </body>
 </html>
