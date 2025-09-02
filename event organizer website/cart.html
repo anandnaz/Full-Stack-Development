@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Customization - Evento Event Management</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- header section starts  -->
+<header class="header">
+    <section class="flex">
+        <a href="#" class="logo"><span>e</span>vento</a>
+        <nav class="navbar">
+            <nav class="navbar">
+                <a href="home.html">home</a>
+                <a href="login.html">login</a>
+                <a href="#" title="More options">More</a>
+            </nav>
+        </nav>
+    </section>
+</header>
+<!-- header section ends -->
+
+<!-- customization section starts -->
+<section class="customization" id="customization">
+    <h1 class="heading"> <span>event customization</span> </h1>
+    <div class="box-container">
+        <!-- Product details and customization form go here -->
+        <div class="box">
+            <h3 class="title">Choose Event</h3>
+            <form id="event-selection-form">
+                <label for="event">Select Event:</label>
+                <select name="event" id="event">
+                    <option value="birthday">Birthday</option>
+                    <option value="wedding">Wedding</option>
+                    <option value="concert">Concert</option>
+                    <option value="other">Other</option>
+                </select>
+
+                <button type="button" onclick="loadEventCustomizationForm()">Load Customization Form</button>
+            </form>
+        </div>
+        <div class="box" id="customization-form-container">
+            <!-- Customization form will be loaded here dynamically -->
+        </div>
+        <div class="box">
+            <h3 class="title">Order Summary</h3>
+            <ul id="orderSummary">
+                <li>Base Price: $0.00</li>
+                <!-- Additional options will be displayed here -->
+                <li>Total: $0.00</li>
+            </ul>
+        </div>
+    </div>
+</section>
+<!-- customization section ends -->
+
+<!-- contact section starts  -->
+
+<section class="contact" id="contact">
+
+    <h1 class="heading"> <span>contact</span> us </h1>
+
+    <form action="">
+        <div class="inputBox">
+            <input type="text" placeholder="name">
+            <input type="email" placeholder="email">
+        </div>
+        <div class="inputBox">
+            <input type="number" placeholder="number">
+            <input type="text" placeholder="subject">
+        </div>
+        <textarea name="" placeholder="your message" id="" cols="30" rows="10"></textarea>
+        <input type="submit" value="send message" class="btn">
+    </form>
+
+</section>
+
+<!-- contact section ends -->
+
+<!-- footer section starts  -->
+<footer class="footer">
+
+    <section class="box-container">
+
+        <div class="box">
+            <h3>branches</h3>
+            <a href="#"> <i class="fas fa-map-marker-alt"></i> mumbai </a>
+            <a href="#"> <i class="fas fa-map-marker-alt"></i> jogeshwari </a>
+            <a href="#"> <i class="fas fa-map-marker-alt"></i> goregaon </a>
+            <a href="#"> <i class="fas fa-map-marker-alt"></i> navi mumbai </a>
+            <a href="#"> <i class="fas fa-map-marker-alt"></i> andheri </a>
+        </div>
+
+        <div class="box">
+            <h3>quick links</h3>
+            <a href="home.html"> <i class="fas fa-arrow-right"></i> home </a>
+            <a href="login.html"> <i class="fas fa-arrow-right"></i> login </a>
+
+        </div>
+
+        <div class="box">
+            <h3>contact info</h3>
+            <a href="#"> <i class="fas fa-phone"></i> +91-9934099516 </a>
+            <a href="#"> <i class="fas fa-phone"></i> +91-9113373275 </a>
+            <a href="#"> <i class="fas fa-envelope"></i> anandanuragnaz@gmail.com </a>
+            <a href="#"> <i class="fas fa-envelope"></i> anandnaz1401@gmail.com </a>
+            <a href="#"> <i class="fas fa-map-marker-alt"></i> mumbai, india - 400104 </a>
+        </div>
+
+        <div class="box">
+            <h3>follow us</h3>
+            <a href="#"> <i class="fab fa-facebook-f"></i> facebook </a>
+            <a href="#"> <i class="fab fa-twitter"></i> twitter </a>
+            <a href="#"> <i class="fab fa-instagram"></i> instagram </a>
+            <a href="#"> <i class="fab fa-linkedin"></i> linkedin </a>
+        </div>
+
+    </section>
+
+    <div class="credit"> created by <span>mr. Anurag Anand</span> | all rights reserved </div>
+
+</footer>
+<!-- footer section ends -->
+
+<!-- theme toggler starts -->
+<div class="theme-toggler">
+
+    <div class="toggle-btn">
+        <i class="fas fa-cog"></i>
+    </div>
+
+    <h3>choose color</h3>
+
+    <div class="buttons">
+        <div class="theme-btn theme-blue"></div>
+        <div class="theme-btn theme-yellow"></div>
+        <div class="theme-btn theme-red"></div>
+        <div class="theme-btn theme-green"></div>
+        <div class="theme-btn theme-orange"></div>
+        <div class="theme-btn theme-pink"></div>
+    </div>
+
+</div>
+<!-- theme toggler ends -->
+
+<script>
+    function loadEventCustomizationForm() {
+        // Get the selected event
+        const selectedEvent = document.getElementById('event').value;
+
+        // Define base prices for each event
+        const basePrices = {
+            birthday: 100,
+            wedding: 200,
+            concert: 150,
+            other: 120
+        };
+
+        // Get the base price for the selected event
+        const basePrice = basePrices[selectedEvent];
+
+        // Load the customization form for the selected event
+        const customizationFormContainer = document.getElementById('customization-form-container');
+        customizationFormContainer.innerHTML = `
+            <h3 class="title">Customization Options</h3>
+            <form id="customization-form">
+                <!-- Add customization options specific to each event -->
+                <label for="facilities">Facilities:</label>
+                <select name="facilities" id="facilities">
+                    <option value="basic">Basic Facilities</option>
+                    <option value="standard">Standard Facilities (+$50.00)</option>
+                    <option value="premium">Premium Facilities (+$100.00)</option>
+                </select>
+
+                <label for="decoration">Decoration:</label>
+                <select name="decoration" id="decoration">
+                    <option value="light">Light Decoration (+$20.00)</option>
+                    <option value="medium">Medium Decoration (+$40.00)</option>
+                    <option value="heavy">Heavy Decoration (+$60.00)</option>
+                </select>
+
+                <label for="musicPhoto">Music and Photo Shoot:</label>
+                <input type="checkbox" name="musicPhoto" id="musicPhoto" value="yes"/> Include (+$30.00)
+
+                <button type="button" onclick="calculateTotal(${basePrice})">Calculate Total</button>
+            </form>
+        `;
+    }
+
+    function calculateTotal(basePrice) {
+        // Get selected values from the form
+        const facilities = document.getElementById('facilities').value;
+        const decoration = document.getElementById('decoration').value;
+        const musicPhoto = document.getElementById('musicPhoto').checked;
+
+        // Prices for customization options
+        const prices = {
+            basic: 0,
+            standard: 50,
+            premium: 100,
+            light: 20,
+            medium: 40,
+            heavy: 60,
+            musicPhoto: 30
+        };
+
+        // Calculate total based on user selections
+        let total = basePrice + prices[facilities] + prices[decoration];
+
+        if (musicPhoto) {
+            total += prices.musicPhoto;
+        }
+
+        // Update the order summary
+        const orderSummary = document.getElementById('orderSummary');
+        orderSummary.innerHTML = `<li>Base Price: $${basePrice}.00</li>`;
+
+        // Display additional options in the order summary
+        if (prices[facilities] > 0) {
+            orderSummary.innerHTML += `<li>${facilities.charAt(0).toUpperCase() + facilities.slice(1)}: +$${prices[facilities]}.00</li>`;
+        }
+
+        if (prices[decoration] > 0) {
+            orderSummary.innerHTML += `<li>${decoration.charAt(0).toUpperCase() + decoration.slice(1)} Decoration: +$${prices[decoration]}.00</li>`;
+        }
+
+        if (musicPhoto) {
+            orderSummary.innerHTML += `<li>Music and Photo Shoot: +$${prices.musicPhoto}.00</li>`;
+        }
+
+        orderSummary.innerHTML += `<li>Total: $${total}.00</li>`;
+    }
+</script>
+
+</body>
+</html>

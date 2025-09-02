@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Agency - Modern Web Solutions</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top custom-navbar" id="mainNavbar">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#home">
+                <i class="fas fa-rocket me-2"></i>DigitalCraft
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#testimonials">Testimonials</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-primary text-white px-3 py-1 rounded ms-2" href="#contact">Get Started</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Carousel Section -->
+    <section id="home">
+        <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="carousel-slide slide-1">
+                        <div class="container">
+                            <div class="row min-vh-100 align-items-center">
+                                <div class="col-lg-6">
+                                    <h1 class="display-4 fw-bold text-white mb-4 fade-in">Transform Your Digital Presence</h1>
+                                    <p class="lead text-white mb-4 fade-in-delay">We create stunning websites and digital experiences that drive results for your business.</p>
+                                    <button class="btn btn-primary btn-lg me-3 fade-in-delay-2" data-bs-toggle="modal" data-bs-target="#portfolioModal">View Our Work</button>
+                                    <button class="btn btn-outline-light btn-lg fade-in-delay-2" href="#contact">Start Project</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-slide slide-2">
+                        <div class="container">
+                            <div class="row min-vh-100 align-items-center">
+                                <div class="col-lg-6 offset-lg-6">
+                                    <h1 class="display-4 fw-bold text-white mb-4">Innovative Web Development</h1>
+                                    <p class="lead text-white mb-4">Modern, scalable solutions built with cutting-edge technologies and best practices.</p>
+                                    <button class="btn btn-primary btn-lg me-3" data-bs-toggle="modal" data-bs-target="#servicesModal">Our Services</button>
+                                    <a class="btn btn-outline-light btn-lg" href="#about">Learn More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-slide slide-3">
+                        <div class="container">
+                            <div class="row min-vh-100 align-items-center text-center">
+                                <div class="col-12">
+                                    <h1 class="display-4 fw-bold text-white mb-4">Ready to Get Started?</h1>
+                                    <p class="lead text-white mb-4">Join 150+ satisfied clients who trust us with their digital success.</p>
+                                    <button class="btn btn-primary btn-lg me-3" data-bs-toggle="modal" data-bs-target="#contactModal">Contact Us</button>
+                                    <a class="btn btn-outline-light btn-lg" href="#testimonials">See Reviews</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-5">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-12">
+                    <h2 class="display-5 fw-bold mb-3">Our Services</h2>
+                    <p class="lead text-muted">Comprehensive digital solutions to grow your business</p>
+                </div>
+            </div>
+            <div class="row g-4" id="servicesGrid">
+                <!-- Services will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-5 bg-primary text-white">
+        <div class="container">
+            <div class="row g-4 text-center" id="statsSection">
+                <!-- Stats will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <div class="row align-items-center mb-5">
+                <div class="col-lg-6">
+                    <h2 class="display-5 fw-bold mb-4">About DigitalCraft</h2>
+                    <p class="lead mb-4">We're a passionate team of designers, developers, and digital strategists committed to helping businesses succeed online.</p>
+                    <p class="mb-4">With over 5 years of experience and 150+ successful projects, we understand what it takes to create digital experiences that not only look great but also drive real business results.</p>
+                    
+                    <!-- Skills Progress Bars -->
+                    <div class="mb-3">
+                        <div class="d-flex justify-content-between mb-1">
+                            <span>Web Design</span>
+                            <span>95%</span>
+                        </div>
+                        <div class="progress mb-3">
+                            <div class="progress-bar bg-primary" role="progressbar" data-width="95%" title="Web Design progress 95%"></div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <div class="d-flex justify-content-between mb-1">
+                            <span>Development</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="progress mb-3">
+                            <div class="progress-bar bg-success" role="progressbar" data-width="90%" title="Development progress 90%"></div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <div class="d-flex justify-content-between mb-1">
+                            <span>SEO & Marketing</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="progress mb-3">
+                            <div class="progress-bar bg-warning" role="progressbar" data-width="85%" title="SEO & Marketing progress 85%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="position-relative">
+                        <div class="bg-light p-4 rounded-3 shadow-sm">
+                            <h4 class="fw-bold mb-3">Why Choose Us?</h4>
+                            <div class="accordion" id="whyChooseAccordion">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                                            Expert Team
+                                        </button>
+                                    </h2>
+                                    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#whyChooseAccordion">
+                                        <div class="accordion-body">
+                                            Our team consists of experienced professionals who stay updated with the latest technologies and industry trends.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                                            Custom Solutions
+                                        </button>
+                                    </h2>
+                                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#whyChooseAccordion">
+                                        <div class="accordion-body">
+                                            Every project is unique. We create tailored solutions that perfectly match your business needs and goals.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                                            Ongoing Support
+                                        </button>
+                                    </h2>
+                                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#whyChooseAccordion">
+                                        <div class="accordion-body">
+                                            We provide continuous support and maintenance to ensure your digital presence remains strong and up-to-date.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Section -->
+            <div class="row text-center mb-5">
+                <div class="col-12">
+                    <h3 class="display-6 fw-bold mb-4">Meet Our Team</h3>
+                </div>
+            </div>
+            <div class="row g-4" id="teamGrid">
+                <!-- Team members will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-5 bg-light">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-12">
+                    <h2 class="display-5 fw-bold mb-3">What Our Clients Say</h2>
+                    <p class="lead text-muted">Don't just take our word for it</p>
+                </div>
+            </div>
+            <div class="row g-4" id="testimonialsGrid">
+                <!-- Testimonials will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-12">
+                    <h2 class="display-5 fw-bold mb-3">Get In Touch</h2>
+                    <p class="lead text-muted">Ready to start your project? Let's talk!</p>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <form id="contactForm" novalidate>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="firstName" placeholder="First Name" required>
+                                    <label for="firstName">First Name</label>
+                                    <div class="invalid-feedback">Please provide a valid first name.</div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="lastName" placeholder="Last Name" required>
+                                    <label for="lastName">Last Name</label>
+                                    <div class="invalid-feedback">Please provide a valid last name.</div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <input type="email" class="form-control" id="email" placeholder="Email" required>
+                                    <label for="email">Email Address</label>
+                                    <div class="invalid-feedback">Please provide a valid email address.</div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <select class="form-select" id="service" required>
+                                        <option value="">Choose a service...</option>
+                                        <option value="web-design">Web Design</option>
+                                        <option value="web-development">Web Development</option>
+                                        <option value="digital-marketing">Digital Marketing</option>
+                                        <option value="seo">SEO Optimization</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                    <label for="service">Service Needed</label>
+                                    <div class="invalid-feedback">Please select a service.</div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <textarea class="form-control" id="message" placeholder="Message" required></textarea>
+                                    <label for="message">Your Message</label>
+                                    <div class="invalid-feedback">Please provide a message.</div>
+                                </div>
+                            </div>
+                            <div class="col-12 text-center">
+                                <button type="submit" class="btn btn-primary btn-lg px-5">Send Message</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h5 class="fw-bold mb-3">
+                        <i class="fas fa-rocket me-2"></i>DigitalCraft
+                    </h5>
+                    <p class="mb-3">Creating exceptional digital experiences that drive business growth and success.</p>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="text-white fs-5" title="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-white fs-5" title="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white fs-5" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="text-white fs-5" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="fw-bold mb-3">Services</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white-50 text-decoration-none">Web Design</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none">Development</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none">SEO</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none">Marketing</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="fw-bold mb-3">Company</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#about" class="text-white-50 text-decoration-none">About</a></li>
+                        <li><a href="#testimonials" class="text-white-50 text-decoration-none">Testimonials</a></li>
+                        <li><a href="#contact" class="text-white-50 text-decoration-none">Contact</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none">Privacy</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h6 class="fw-bold mb-3">Contact Info</h6>
+                    <p class="mb-1"><i class="fas fa-map-marker-alt me-2"></i>123 Business St, Tech City, TC 12345</p>
+                    <p class="mb-1"><i class="fas fa-phone me-2"></i>+1 (555) 123-4567</p>
+                    <p class="mb-1"><i class="fas fa-envelope me-2"></i>hello@digitalcraft.com</p>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2025 DigitalCraft. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-0">Made with <i class="fas fa-heart text-danger"></i> by DigitalCraft</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modals -->
+    <!-- Portfolio Modal -->
+    <div class="modal fade" id="portfolioModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Our Portfolio</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" title="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h6 class="card-title">E-commerce Platform</h6>
+                                    <p class="card-text small">Modern online store with advanced features</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h6 class="card-title">Corporate Website</h6>
+                                    <p class="card-text small">Professional business website with CMS</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h6 class="card-title">Mobile App</h6>
+                                    <p class="card-text small">Cross-platform mobile application</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h6 class="card-title">SaaS Dashboard</h6>
+                                    <p class="card-text small">Complex data visualization platform</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Services Modal -->
+    <div class="modal fade" id="servicesModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Our Services</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" title="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>We offer a comprehensive range of digital services:</p>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Custom Web Design</li>
+                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Frontend & Backend Development</li>
+                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>E-commerce Solutions</li>
+                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Mobile App Development</li>
+                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>SEO & Digital Marketing</li>
+                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Maintenance & Support</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#contactModal">Get Quote</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Modal -->
+    <div class="modal fade" id="contactModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Quick Contact</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" title="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="quickContactForm">
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Your Name" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" placeholder="Your Email" required>
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" rows="3" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Alert (Initially Hidden) -->
+    <div class="alert alert-success alert-dismissible position-fixed top-0 start-50 translate-middle-x mt-5 d-none" id="successAlert" role="alert">
+        <i class="fas fa-check-circle me-2"></i>
+        <span id="alertMessage">Message sent successfully!</span>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" title="Close"></button>
+    </div>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="app.js"></script>
+</body>
+</html>
